@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "roadsafety-42931",
+  "private_key_id": "b2834d4147f0aa9935ddd66ce670f8b1501bb959",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC00rwRvrPc86vq\nmSqCE1elmtIqUJyCFU/xyEFEYx7njFJYEP3FtTgLllY6PJVcslkTpxkoR2Bak45s\nEnwAsGemBViT8g6TilDUkENRQvX1kCHbVWWSPFR9QrG1kbdCZA5OKEmlm3EwiZ7N\nJJrwzEtXnsWs0A5X1JFv9BSUE1fpM6EKgVr7Dmxq+E3yABmiGxQrPg/8j//Keohq\nlQTRWMlTBgyUpi3JSiOi5RCtZ7nFdWb6wrTXVAkblLprGhwcbdZW3fXhsAFgkonY\nlUCCRdGQoWwbPBD4Skhhu1SyfSWYcVOpnxSA1TA+kxhq1XoWuufDqWDsdbHnF+Zj\n7sRBg1QRAgMBAAECggEAAuu9BTncAKuQeTqGZuG+WpLWxn91Gb5To2ORV1QVD5cz\nDNBgcwk/eaNw6uGn5X6NhQ1f0QhfIHNt+2WsilvPHs3LDZ+9N8mmDtryNW20GKZ+\nf4MggAVYtYnGYlkTWV+RohZRQzswr8CnV6e5134rUOPkDEuzkZxhyYnLK82or8AC\naufubET8TCOElCG2ax5S3tKTcPE8cntR9/mukE0pavQ0HYsbuutKuyq+Iyao/9Nh\nWD4lQNyy4f/sfoWD1FI8NQuBRj69MiJCgFkt26wKHfofOl6htUQM/JtZUiOeEnzj\nz456b3RcJnYFMwfz4Uno8tLPT7o7T4AdMhFU9xl9SQKBgQDgHXyOrmcDbpQWpMLg\niitTlO6T91QAoTpnKyKNqycfyobN6KbdeFPW0GenoTngG074LjoWenaGVDry9DPQ\nbD+qw7DaXf2ndeY1v4S0zyD2pg4p4ZGOhE5fcQqPE2L11T7CzscgSG98Uh3C2Hfp\n8xNP0DwHTq/RLh2bAxZqvMY4mQKBgQDOjIHkZyfcygQZZn/sgbSwj6xfFoMW1lyG\nnwWDwh2JtJm1KnoneMRTyNp/xkAhyrRXfmWdmu9JPL38b9qxqADSTf5jfK45bBbo\n2nq/LwMr+8cMyMx/RhDTtlw2OSiVmuH3blii1TVnTxx0qe/L/hoZknQ9WB4S2EBn\n7hAsMXjKOQKBgFTMM13VNVsCEvxCWQ4WmXAlkOPhmCIo3u08T/WkhcgsnDb6yXBQ\n4AAOmLm/ciOOkaGr9ASfT4tiAW/94EEDRE+7fYYSPDCJlpJNpcu393P7vq4wECAJ\nhZHtNp6OKkpz5ixVith3L9+tPl+EAlM9ytfPJXdqWXHfbgpB79BxHts5AoGBAJjv\ntOX3864p7usX2DS4vZ/WYh1uP9ZTFuOfL6glvVVPYliggR5k74nSOOdPVgEvZGU8\nc+VE6VTjIxGdiOLusN0HXwsvMJnYDQaRbz3Mg563qOUwcSr0KFV6u8ByhjhwHEzn\nab33/Ljn/PvtMF9tYMn6hRM/AdWWReoufc8bOoMRAoGAQn60QReP04DSwS+yz7+f\nka2Yx+hjF4yU5FAzoKmsxSjXxitbFn/fDYGdwvCbBCObbCE0P3GXmkWKLrogvksd\nv8stOmV4yASKOzqlteucfyzqdsI3Lg2qSuhqYLQObrRAGgVe4nPWPwGmDRA9quWe\ng8Zwn9Ol8BKbuBAv0vtRgJs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-9uuff@roadsafety-42931.iam.gserviceaccount.com",
+  "client_id": "115084297789796275817",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-9uuff%40roadsafety-42931.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

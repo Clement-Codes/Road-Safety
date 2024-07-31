@@ -15,18 +15,19 @@ const SignUp = () => {
     const [isSubmitting, setSubmitting] = useState(false);
     const [form, setForm] = useState({
       username: "",
+      telematicDeviceID:"",
       email: "",
       password: "",
     });
   
     const submit = async () => {
-      if (form.username === "" || form.email === "" || form.password === "") {
+      if (form.username === "" || form.telematicDeviceID === "" || form.email === "" || form.password === "") {
         Alert.alert("Error", "Please fill in all fields");
       }
   
       setSubmitting(true);
       try {
-        const result = await createUser(form.email, form.password, form.username);
+        const result = await createUser(form.email, form.password, form.username, form.telematicDeviceID);
         setUser(result);
         setIsLogged(true);
   
@@ -41,11 +42,12 @@ const SignUp = () => {
 
   return (
     <SafeAreaView className="bg-primary h-full">
-        <ScrollView>
+        <ScrollView className='mb-6'>
             <View className='w-full justify-center h-full px-4 my-6 min-h-[83vh]'>
-                <Image source={images.logo} resizeMode='contain' className="w-[115px] h-[35px]"/>
-                <Text className="text-2xl text-white text-semibold mt-10 font-psemibold">Sign up to Aora</Text>
+                <Image source={images.logoNewHor} resizeMode='contain' className="w-[125px] h-[45px]"/>
+                <Text className="text-2xl text-white text-semibold mt-10 font-psemibold">Sign up to DriveSafe</Text>
                 <FormField title="Username" value={form.username} handleChangeText={(e) => setForm({...form, username: e})} otherStyles="mt-10"/>
+                <FormField title="Telematic Device ID" value={form.email} handleChangeText={(e) => setForm({...form, telematicDeviceID: e})} otherStyles="mt-5"/>
                 <FormField title="Email" value={form.email} handleChangeText={(e) => setForm({...form, email: e})} otherStyles="mt-5" keyboardType="email-address"/>
                 <FormField title="Password" value={form.password} handleChangeText={(e) => setForm({...form, password: e})} otherStyles="mt-5"/>
                 <CustomButton title="Sign Up" handlePress={submit} containerStyles="mt-7" isLoading={isSubmitting}/>
