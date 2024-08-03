@@ -37,7 +37,7 @@ const TabsLayout = () => {
                 tabBarIcon: ({ color, focused }) => (
                     <TabIcon icon={icons.bookmark}
                     color={color}
-                    name="Bookmark"
+                    name="Data"
                     focused={focused}
                     />
                 )
@@ -49,7 +49,7 @@ const TabsLayout = () => {
                 tabBarIcon: ({ color, focused }) => (
                     <TabIcon icon={icons.plus}
                     color={color}
-                    name="Create"
+                    name="About"
                     focused={focused}
                     />
                 )

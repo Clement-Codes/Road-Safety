@@ -11,14 +11,8 @@ import VideoCard from '../../components/VideoCard'
 import { useGlobalContext } from '../../context/GlobalProvider'
 import database from '../../config'
 import {ref, onValue, query, limitToLast, orderByChild, equalTo, get } from 'firebase/database'
-
-
-const DataRow = ({ title, value }) => (
-  <View className="flex-row border-b border-gray-600 py-2">
-    <Text className="flex-1 text-sm font-semibold text-white">{title}</Text>
-    <Text className="text-sm text-white text-right">{value}</Text>
-  </View>
-);
+import Distraction from '../../components/Distraction'
+import DataRow from '../../components/DataRow'
 
 const Home = () => {
   const { user, setUser, setIsLoggedIn } = useGlobalContext()
@@ -83,7 +77,7 @@ const Home = () => {
 
   return (
     <SafeAreaView className="bg-primary h-full">
-          <ScrollView  className="flex my-6 px-4 space-y-6">
+          <ScrollView  className="flex my-6 px-4 space-y-0">
             <View className="flex justify-between items-start flex-row mb-6">
               <View>
                 <Text className="font-pmedium text-sm text-gray-100">
@@ -102,13 +96,16 @@ const Home = () => {
                 />
               </View>
             </View>
-            <SearchInput />
+            {/* <SearchInput /> */}
             <View>
               {latestData ? (
                   <View className="bg-black-100 rounded-2xl border-2 border-black-200 rounded-lg p-4 my-2">
                     <Text className="text-xl font-bold mb-4 text-center text-white">Live Data</Text>
                     <View>
-                      <DataRow title="Harsh Acceleration" value={latestData.harsh_acceleration} />
+                      <DataRow title="Latitude" value={latestData.harsh_acceleration} />
+                      <DataRow title="Longitude" value={latestData.harsh_acceleration} />
+                      <DataRow title="Road" value={latestData.telematic_name} />
+                      <DataRow title="Weather" value={latestData.weather_condition} />
                       <DataRow title="Harsh Braking" value={latestData.harsh_braking} />
                       <DataRow title="Over Speeding" value={latestData.over_speeding} />
                       <DataRow title="Over Speeding Score" value={latestData.over_speeding_score} />
@@ -138,6 +135,9 @@ const Home = () => {
                   </View>
                 ):(<></>)
               }
+            </View>
+            <View>
+              <Distraction/>
             </View>
         </ScrollView>
       {/* <FlatList

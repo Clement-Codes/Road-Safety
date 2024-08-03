@@ -53,7 +53,7 @@ const Profile = () => {
               titleStyles="text-lg"
             />
 
-            <View className="mt-5 flex flex-row">
+            {/* <View className="mt-5 flex flex-row">
               <InfoBox
                 title={posts.length || 0}
                 subtitle="Posts"
@@ -65,7 +65,7 @@ const Profile = () => {
                 subtitle="Followers"
                 titleStyles="text-xl"
               />
-            </View>
+            </View> */}
           </View>
       {/* <FlatList
         data={posts}
