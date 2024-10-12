@@ -10,7 +10,7 @@ import { createUser } from '../../lib/appwrite';
 import { useGlobalContext } from '../../context/GlobalProvider';
 
 const SignUp = () => {
-    const { setUser, setIsLogged } = useGlobalContext();
+    const { setUser, setIsLoggedIn } = useGlobalContext();
 
     const [isSubmitting, setSubmitting] = useState(false);
     const [form, setForm] = useState({
@@ -29,7 +29,7 @@ const SignUp = () => {
       try {
         const result = await createUser(form.email, form.password, form.username, form.telematicDeviceID);
         setUser(result);
-        setIsLogged(true);
+        setIsLoggedIn(true);
   
         router.replace("/home");
       } catch (error) {
@@ -47,7 +47,7 @@ const SignUp = () => {
                 <Image source={images.logoNewHor} resizeMode='contain' className="w-[125px] h-[45px]"/>
                 <Text className="text-2xl text-white text-semibold mt-10 font-psemibold">Sign up to DriveSafe</Text>
                 <FormField title="Username" value={form.username} handleChangeText={(e) => setForm({...form, username: e})} otherStyles="mt-10"/>
-                <FormField title="Telematic Device ID" value={form.email} handleChangeText={(e) => setForm({...form, telematicDeviceID: e})} otherStyles="mt-5"/>
+                <FormField title="Telematic Device ID" value={form.telematicDeviceID} handleChangeText={(e) => setForm({...form, telematicDeviceID: e})} otherStyles="mt-5"/>
                 <FormField title="Email" value={form.email} handleChangeText={(e) => setForm({...form, email: e})} otherStyles="mt-5" keyboardType="email-address"/>
                 <FormField title="Password" value={form.password} handleChangeText={(e) => setForm({...form, password: e})} otherStyles="mt-5"/>
                 <CustomButton title="Sign Up" handlePress={submit} containerStyles="mt-7" isLoading={isSubmitting}/>

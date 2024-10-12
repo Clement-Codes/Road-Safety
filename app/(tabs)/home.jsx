@@ -119,6 +119,41 @@ const Home = () => {
               }
             </View>
             <View>
+              {latestData ? (
+                  <View className="bg-black-100 rounded-2xl border-2 border-black-200 rounded-lg p-4 my-2">
+                    <Text className="text-xl font-bold mb-4 text-center text-white">Road Risk and Severity Data</Text>
+                    <View>
+                      <DataRow title="Road Risk" value={latestData.road_risk} />
+                      <DataRow title="Road Severity" value={latestData.road_severity} />
+                    </View>
+                  </View>
+                ):(<></>)
+              }
+            </View>
+            <View>
+              {latestData ? (
+                  <View className="bg-black-100 rounded-2xl border-2 border-black-200 rounded-lg p-4 my-2">
+                    <Text className="text-xl font-bold mb-4 text-center text-white">Driving Behavior Risk Assessment</Text>
+                    {latestData.cluster == 0 && <View>
+                                                  <DataRow title="Driver Risk" value="Medium" />
+                                                </View>
+                    }
+                    {latestData.cluster == 1 && <View>
+                                                  <DataRow title="Driver Risk" value="High" />
+                                                </View>
+                    }
+                    {latestData.cluster == 2 && <View>
+                                                  <DataRow title="Driver Risk" value="Low"/>
+                                                </View>
+                    }                    
+                  </View>
+                ):(<></>)
+              }
+            </View>
+            <View>
+              <Distraction/>
+            </View>
+            <View>
               {sessionData ? (
                   <View className="bg-black-100 rounded-2xl border-2 border-black-200 rounded-lg p-4 my-2">
                     <Text className="text-xl font-bold mb-4 text-center text-white">Session Data</Text>
@@ -135,9 +170,6 @@ const Home = () => {
                   </View>
                 ):(<></>)
               }
-            </View>
-            <View>
-              <Distraction/>
             </View>
         </ScrollView>
       {/* <FlatList
