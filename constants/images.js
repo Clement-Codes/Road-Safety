@@ -8,5 +8,6 @@ import empty from "../assets/images/empty.png";
 import logoNew from "../assets/images/logo-new.png";
 import logoNewHor from "../assets/images/logo-new-horizontal.png";
 import logoNewSmall from "../assets/images/logo-new-small.png";
+import car from "../assets/images/car.png";
 
-export default { profile, thumbnail, cards, path, logo, logoSmall, empty, logoNew, logoNewHor, logoNewSmall };
+export default { profile, thumbnail, cards, path, logo, logoSmall, empty, logoNew, logoNewHor, logoNewSmall, car };

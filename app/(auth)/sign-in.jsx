@@ -22,9 +22,7 @@ const SignIn = () => {
       if (form.email === "" || form.password === "") {
         Alert.alert("Error", "Please fill in all fields");
       }
-  
       setSubmitting(true);
-      Alert.alert("Success", form.email + ", " +form.password);
       try {
         await signIn(form.email, form.password);
         const result = await getCurrentUser();

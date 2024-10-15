@@ -13,6 +13,9 @@ import database from '../../config'
 import {ref, onValue, query, limitToLast, orderByChild, equalTo, get } from 'firebase/database'
 import Distraction from '../../components/Distraction'
 import DataRow from '../../components/DataRow'
+import Map from '../../components/Map'
+import DrivingDataChart from '../../components/DrivingDataChart'
+
 
 const Home = () => {
   const { user, setUser, setIsLoggedIn } = useGlobalContext()
@@ -63,7 +66,6 @@ const Home = () => {
     fetchData();
   }, [user]);
 
-  console.log(sessionData)
   const {data: posts, refetch} = useAppwrite(getAllPosts)
   const {data: latestPosts} = useAppwrite(getLatestPosts)
 
@@ -74,7 +76,10 @@ const Home = () => {
       await refetch();
       setRefreshing(false);
   }
-
+  const datad = {
+    labels: ["Swim", "Bike", "Run"], // optional
+    data: [0.4, 0.6, 0.8]
+  };
   return (
     <SafeAreaView className="bg-primary h-full">
           <ScrollView  className="flex my-6 px-4 space-y-0">
@@ -98,6 +103,25 @@ const Home = () => {
             </View>
             {/* <SearchInput /> */}
             <View>
+              {latestData ? (<View className="bg-black-100 rounded-2xl border-2 border-black-200 rounded-lg  pt-4 pb-4 my-2">
+                <Text className="text-xl font-bold mb-4 text-center text-white">Road Risk and Severity Data</Text>
+                <Map className="mb-4" risk={latestData.road_risk} severity={latestData.road_severity}/>
+                <View className="p-4 mT-2">
+                  <DataRow title="Road Risk (Yes / No):" value={severity?"Yes":"No"} />
+                  <DataRow title="Road Severity:" value={severity == 0?"Low":severity == 1?"Medium":"High"} />
+                </View>
+
+              </View>):(<></>)
+              }
+              <View>
+              {latestData ? (
+                  <View className="bg-black-100 rounded-2xl border-2 border-black-200 rounded-lg p-4 my-2">
+                    <Text className="text-xl font-bold mb-4 text-center text-white">Road Risk and Severity Data</Text>
+                    <DrivingDataChart latestData ={latestData} />
+                  </View>
+                ):(<></>)
+              }
+            </View>
               {latestData ? (
                   <View className="bg-black-100 rounded-2xl border-2 border-black-200 rounded-lg p-4 my-2">
                     <Text className="text-xl font-bold mb-4 text-center text-white">Live Data</Text>
