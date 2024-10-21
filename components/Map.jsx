@@ -16,7 +16,6 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 const origin = { latitude: 37.78825, longitude: -122.4324 };
 const destination = { latitude: 37.7749, longitude: -122.4194 };
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyANqF9Kc0Mpq1crt8hkzjgkE7dmmy51arI'; 
 
   const Map = ({ risk, severity }) => {
     const [region, setRegion] = useState(null);
